@@ -57,6 +57,22 @@ class HelloWorldSkill(MycroftSkill):
     def stop(self):
         pass
 
+for i in range(3):
+        sequence = tokenizer.texts_to_sequences([text])[0]
+        sequence = np.array(sequence)
+        
+        preds = model.predict_classes(sequence)
+#         print(preds)
+        predicted_word = ""
+        
+        for key, value in tokenizer.word_index.items():
+            if value == preds:
+                predicted_word = key
+                break
+        
+        print(predicted_word)
+        return predicted_word
+
 
 def create_skill():
     return HelloWorldSkill()
