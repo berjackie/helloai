@@ -19,6 +19,7 @@ from adapt.intent import IntentBuilder
 from mycroft import MycroftSkill, intent_handler
 
 class HelloWorldSkill(MycroftSkill):
+    print('test...111...')
     def __init__(self):
         """ The __init__ method is called when the Skill is first constructed.
         It is often used to declare variables or perform setup actions.
@@ -53,6 +54,8 @@ class HelloWorldSkill(MycroftSkill):
                       "info, debug, warning, error, and exception.")
         self.speak_dialog("hello.world")
 
+    print('test...222...')
+    
     def stop(self):
         pass
 
