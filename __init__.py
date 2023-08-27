@@ -77,4 +77,5 @@ for i in range(3):
 
 
 def create_skill():
+    print('test...333...')
     return HelloWorldSkill()
